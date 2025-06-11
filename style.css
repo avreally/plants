@@ -221,6 +221,24 @@ main {
   text-align: center;
 }
 
+.section:has(.section-icon) {
+  background-color: var(--clr-neutral-100);
+}
+
+.section-icon {
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--clr-green-400);
+  max-width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-icon-image {
+  width: 50%;
+}
+
 .gallery {
   width: 100%;
   display: grid;
@@ -286,6 +304,10 @@ main {
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .section:has(.section-icon) {
+    max-width: none;
   }
 
   .gallery {
