@@ -48,7 +48,7 @@ p,
 li,
 figcaption {
   text-wrap: pretty;
-  max-width: 55ch;
+  /* max-width: 55ch; */
 }
 
 /* for container queries, landmarks as containers */
@@ -237,6 +237,25 @@ main {
 
 .section-icon-image {
   width: 50%;
+  height: 50%;
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section-previous-crops {
+  .button {
+    align-self: flex-end;
+  }
+}
+
+.section-newsletter,
+.section-previous-crops {
+  gap: 2rem;
 }
 
 .gallery {
@@ -259,15 +278,56 @@ main {
   object-fit: cover;
 }
 
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  padding: 2px;
+  border: 1px solid var(--clr-neutral-900);
+  border-radius: 2rem;
+}
+
+.form-input {
+  border: none;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: var(--clr-green-400);
+  color: var(--clr-neutral-100);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--clr-green-200);
+    color: var(--clr-neutral-900);
+  }
+}
+
+.form-button {
+  text-transform: uppercase;
+}
+
 .footer {
   padding: 3rem 1rem;
 }
 
 /* Tablet */
+
 @media (min-width: 640px) {
+  .section-title {
+    max-width: 30ch;
+  }
+
   .gallery {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+
+  .newsletter-form {
+    max-width: 90%;
   }
 }
 
@@ -306,8 +366,30 @@ main {
     padding-right: 0;
   }
 
-  .section:has(.section-icon) {
+  .section-newsletter,
+  .section-previous-crops {
     max-width: none;
+    padding-left: 30%;
+    padding-right: 30%;
+    gap: 4rem;
+
+    .section-content {
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+
+  .section-newsletter {
+    flex-direction: row-reverse;
+  }
+
+  .section-previous-crops {
+    flex-direction: row;
+  }
+
+  .section-icon {
+    width: 10rem;
+    flex-shrink: 0;
   }
 
   .gallery {
