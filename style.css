@@ -189,6 +189,8 @@ header {
   display: flex;
   align-items: center;
   gap: 1rem;
+  font-weight: var(--fw-500);
+  font-size: var(--fs-500);
 }
 
 .header-logo {
@@ -204,7 +206,11 @@ header {
   line-height: 0.9;
 }
 
-.logo-icon,
+.logo-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
 .menu-icon {
   width: 2rem;
   height: 2rem;
@@ -273,6 +279,41 @@ main {
   gap: 2rem;
 }
 
+/* --- NEWSLETTER --- */
+
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  padding: 2px;
+  border: 1px solid var(--clr-neutral-900);
+  border-radius: 2rem;
+}
+
+.form-input {
+  border: none;
+  margin: 0 auto;
+  background-color: var(--clr-neutral-100);
+}
+
+.button {
+  background-color: var(--clr-green-400);
+  color: var(--clr-neutral-100);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--clr-green-200);
+    color: var(--clr-neutral-900);
+  }
+}
+
+.form-button {
+  text-transform: uppercase;
+}
+
 /* --- GALLERY --- */
 
 .gallery {
@@ -293,40 +334,6 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* --- NEWSLETTER --- */
-
-.newsletter-form {
-  display: flex;
-  width: 100%;
-  padding: 2px;
-  border: 1px solid var(--clr-neutral-900);
-  border-radius: 2rem;
-}
-
-.form-input {
-  border: none;
-  margin: 0 auto;
-}
-
-.button {
-  background-color: var(--clr-green-400);
-  color: var(--clr-neutral-100);
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-
-  &:hover,
-  &:focus-visible {
-    background-color: var(--clr-green-200);
-    color: var(--clr-neutral-900);
-  }
-}
-
-.form-button {
-  text-transform: uppercase;
 }
 
 /* --- CARDS --- */
@@ -458,13 +465,6 @@ main {
 
 .footer-logo {
   color: var(--clr-neutral-100);
-  font-weight: var(--fw-400);
-  font-size: var(--fs-500);
-
-  .logo-icon {
-    width: 3rem;
-    height: 3rem;
-  }
 
   g {
     stroke: var(--clr-neutral-100);
@@ -491,8 +491,31 @@ main {
 /* Tablet */
 
 @media (min-width: 640px) {
+  /* --- SECTION --- */
+
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .section-newsletter,
+  .section-previous-crops {
+    gap: 3rem;
+  }
+
+  .section-icon-image {
+    width: 90%;
+  }
+
   .section-title {
     max-width: 30ch;
+    font-size: var(--fs-800);
+  }
+
+  .section-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: var(--fs-500);
   }
 
   /* --- GALLERY --- */
@@ -503,10 +526,6 @@ main {
   }
 
   /* --- NEWSLETTER --- */
-
-  .newsletter-form {
-    max-width: 90%;
-  }
 
   /* --- CARDS --- */
 
@@ -596,6 +615,8 @@ main {
     }
   }
 
+  /* --- SECTION --- */
+
   .section {
     max-width: 70%;
     margin: 0 auto;
@@ -605,10 +626,9 @@ main {
 
   .section-newsletter,
   .section-previous-crops {
-    max-width: none;
-    padding-left: 30%;
-    padding-right: 30%;
+    max-width: 100%;
     gap: 4rem;
+    justify-content: center;
 
     .section-content {
       text-align: left;
@@ -629,6 +649,22 @@ main {
     flex-shrink: 0;
   }
 
+  .section-content {
+    padding: 0;
+  }
+
+  .section-title {
+    font-size: var(--fs-700);
+    max-width: 24ch;
+  }
+
+  .section-paragraph {
+    max-width: 50ch;
+  }
+
+  .button {
+    font-size: var(--fs-400);
+  }
   /* --- GALLERY --- */
 
   .gallery {
@@ -700,5 +736,25 @@ main {
     li {
       list-style-type: none;
     }
+  }
+}
+
+/* XL Desktop / 4K	*/
+@media (min-width: 1536px) {
+  header,
+  .footer-wrapper {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+
+  /* --- SECTION --- */
+
+  .section {
+    max-width: 50%;
+  }
+
+  .section-newsletter,
+  .section-previous-crops {
+    max-width: 100%;
   }
 }
