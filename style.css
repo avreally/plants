@@ -525,8 +525,6 @@ main {
     grid-template-rows: repeat(2, 1fr);
   }
 
-  /* --- NEWSLETTER --- */
-
   /* --- CARDS --- */
 
   .cards {
@@ -590,6 +588,8 @@ main {
 /* Desktop */
 
 @media (min-width: 1024px) {
+  /* --- HEADER --- */
+
   header,
   .footer-wrapper {
     padding-left: 15%;
@@ -665,6 +665,7 @@ main {
   .button {
     font-size: var(--fs-400);
   }
+
   /* --- GALLERY --- */
 
   .gallery {
@@ -741,6 +742,8 @@ main {
 
 /* XL Desktop / 4K	*/
 @media (min-width: 1536px) {
+  /* --- HEADER --- */
+
   header,
   .footer-wrapper {
     padding-left: 25%;
