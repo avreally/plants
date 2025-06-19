@@ -358,13 +358,18 @@ main {
   object-fit: cover;
 }
 
-.overlay-image {
+.plant-image-container::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  padding: 20%;
   width: 100%;
   height: 100%;
+  background-image: url("./Assets/images/icon-seedling-2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+  pointer-events: none;
 }
 
 .tags {
@@ -541,10 +546,6 @@ main {
 
   .plant-image {
     aspect-ratio: 1 / 1;
-  }
-
-  .overlay-image {
-    padding: 30%;
   }
 
   .tags {
