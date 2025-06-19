@@ -159,8 +159,7 @@ h3 {
 a {
   text-decoration: none;
 
-  &:hover,
-  &:focus-visible {
+  &:hover {
     color: var(--clr-primary-light-1);
     text-decoration: underline;
   }
@@ -177,7 +176,6 @@ body {
 
 header {
   display: flex;
-  padding: 1rem;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
@@ -193,6 +191,7 @@ header {
 }
 
 .header-logo {
+  padding: 1rem;
   color: var(--clr-green-400);
 
   g {
@@ -211,13 +210,18 @@ header {
 }
 
 .menu-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
   fill: var(--clr-green-400);
+  margin-left: auto;
+  margin-right: 1rem;
+  padding: 1rem;
 }
 
-.menu-icon {
-  margin-left: auto;
+.menu-icon:hover {
+  background-color: var(--clr-green-400);
+  fill: var(--clr-neutral-100);
+  cursor: pointer;
 }
 
 nav {
@@ -613,10 +617,23 @@ main {
   .nav-list {
     display: flex;
     gap: 2rem;
+    color: var(--clr-green-400);
+    font-weight: var(--fw-500);
 
     li {
       list-style-type: none;
       text-transform: uppercase;
+      padding: 1rem;
+    }
+
+    li:hover {
+      background-color: var(--clr-green-400);
+      color: var(--clr-neutral-100);
+      cursor: pointer;
+
+      a {
+        text-decoration: none;
+      }
     }
   }
 
