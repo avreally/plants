@@ -379,7 +379,7 @@ main {
   border-radius: 2rem;
   padding: 0.35rem 0.625rem;
   font-size: var(--fs-200);
-  font-weight: var(--fw-700);
+  font-weight: var(--fw-600);
   letter-spacing: -0.01rem;
   color: var(--clr-neutral-100);
   background-color: var(--clr-edible);
@@ -531,11 +531,12 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    align-items: stretch;
   }
 
   .card {
-    justify-content: space-between;
+    grid-row: span 5;
+    display: grid;
+    grid-template-rows: subgrid;
   }
 
   .plant-image {
@@ -548,6 +549,7 @@ main {
 
   .tags {
     gap: 0.4rem;
+    align-content: flex-start;
   }
 
   .tag {
@@ -557,10 +559,6 @@ main {
 
   .review-text {
     line-height: 1.5;
-  }
-
-  .customer-info {
-    margin-top: auto;
   }
 
   /* --- FOOTER --- */
@@ -715,10 +713,6 @@ main {
   .tag {
     padding: 0.25rem 0.5rem;
     letter-spacing: -0.01rem;
-  }
-
-  .customer-info {
-    margin-top: auto;
   }
 
   .avatar {
