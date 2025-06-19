@@ -158,7 +158,6 @@ h3 {
 
 a {
   text-decoration: none;
-  color: var(--clr-accent);
 
   &:hover,
   &:focus-visible {
@@ -295,6 +294,10 @@ main {
   background-color: var(--clr-neutral-100);
 }
 
+.form-input:focus-visible {
+  outline: none;
+}
+
 .button {
   background-color: var(--clr-green-400);
   color: var(--clr-neutral-100);
@@ -302,11 +305,12 @@ main {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  border: 1px solid var(--clr-green-400);
 
   &:hover,
   &:focus-visible {
-    background-color: var(--clr-green-200);
-    color: var(--clr-neutral-900);
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-green-400);
   }
 }
 
@@ -487,6 +491,8 @@ main {
   display: flex;
   gap: 0.75rem;
   font-weight: var(--fw-600);
+  color: var(--clr-neutral-100);
+  cursor: pointer;
 }
 
 .contacts-icon {
@@ -731,6 +737,7 @@ main {
 
     li {
       list-style-type: none;
+      cursor: pointer;
     }
   }
 }
